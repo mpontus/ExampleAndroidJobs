@@ -6,7 +6,9 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationCompat.Builder;
 import app.example.schedulers.R;
+import java.util.concurrent.TimeUnit;
 
 public class NotificationUtils {
   private static final int NOTIFICATION_ID = 0;
@@ -30,10 +32,10 @@ public class NotificationUtils {
     }
 
     NotificationCompat.Builder notificationBuilder =
-        new NotificationCompat.Builder(context, CHANNEL_ID)
+        new Builder(context, CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_launcher_background)
-            .setContentTitle("My notification")
-            .setContentText("Hello world!")
+            .setContentTitle(context.getString(R.string.notification_title))
+            .setContentText(getNotificationMessage(context))
             .setDefaults(Notification.DEFAULT_VIBRATE);
 
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN
@@ -42,5 +44,20 @@ public class NotificationUtils {
     }
 
     notificationManager.notify(NOTIFICATION_ID, notificationBuilder.build());
+
+    PreferenceUtils.setTimerStart(context, System.currentTimeMillis());
+  }
+
+  private static String getNotificationMessage(Context context) {
+    long start = PreferenceUtils.getTimerStart(context);
+    long now = System.currentTimeMillis();
+    long diffInSeconds = TimeUnit.MILLISECONDS.toSeconds(now - start);
+    long minutesPassed = TimeUnit.SECONDS.toMinutes(diffInSeconds);
+    long secondsLeftover = diffInSeconds - TimeUnit.MINUTES.toSeconds(minutesPassed);
+
+    return context.getString(
+        R.string.message_time_elapsed,
+        minutesPassed,
+        secondsLeftover);
   }
 }

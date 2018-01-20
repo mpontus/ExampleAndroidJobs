@@ -24,4 +24,17 @@ public class PreferenceUtils {
     preferences.edit().putBoolean(context.getString(R.string.pref_reminder_enabled_key), isEnabled)
         .commit();
   }
+
+  public static long getTimerStart(Context context) {
+    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+
+    return preferences.getLong(context.getString(R.string.pref_reminder_start_key), 0);
+  }
+
+  public static void setTimerStart(Context context, long timerStart) {
+    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+
+    preferences.edit().putLong(context.getString(R.string.pref_reminder_start_key), timerStart)
+        .commit();
+  }
 }

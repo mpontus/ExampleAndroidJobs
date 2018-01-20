@@ -7,4 +7,7 @@
   <string name="message_reminder_disabled">Job has been unscheduled</string>
   <string name="button_title_reminder_enable">Schedule Job</string>
   <string name="button_title_reminder_disable">Unschedule Job</string>
+  <string name="notification_title">Scheduled Reminder Example</string>
+  <string name="pref_reminder_start_key">reminder_start</string>
+  <string name="message_time_elapsed">Elapsed time: %d minutes %d seconds</string>
 </resources>

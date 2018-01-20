@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements OnSharedPreferenc
         PreferenceUtils.setReminderEnabled(MainActivity.this, nowIsReminderEnabled);
 
         if (nowIsReminderEnabled) {
+          PreferenceUtils.setTimerStart(MainActivity.this, System.currentTimeMillis());
           SchedulerUtils.scheduleJob(MainActivity.this);
         } else {
           SchedulerUtils.unscheduleJob(MainActivity.this);
