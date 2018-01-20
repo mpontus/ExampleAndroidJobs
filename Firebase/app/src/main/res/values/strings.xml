@@ -1,4 +1,5 @@
 <resources>
   <string name="app_name">Firebase JobDispatcher Example</string>
   <string name="toggle_job">Toggle Job</string>
+  <string name="main_notification_channel_name">Job dispatcher example</string>
 </resources>
