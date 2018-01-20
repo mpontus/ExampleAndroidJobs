@@ -6,10 +6,16 @@ import android.preference.PreferenceManager;
 import app.example.schedulers.R;
 
 /**
- * Created by michael on 20/01/2018.
+ * Functions for accessing shared preferences
  */
-
 public class PreferenceUtils {
+
+  /**
+   * Returns whether the job is currently scheduled
+   *
+   * @param context
+   * @return
+   */
   public static boolean isReminderEnabled(Context context) {
     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
 
@@ -18,6 +24,12 @@ public class PreferenceUtils {
         context.getResources().getBoolean(R.bool.pref_reminder_enabled_default_value));
   }
 
+  /**
+   * Record the fact that the job has been scheduled
+   *
+   * @param context
+   * @param isEnabled
+   */
   public static void setReminderEnabled(Context context, boolean isEnabled) {
     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
 
@@ -25,12 +37,23 @@ public class PreferenceUtils {
         .commit();
   }
 
+  /**
+   * Returns the time elapsed since the job has been scheduled since the last notification
+   * @param context
+   * @return
+   */
   public static long getTimerStart(Context context) {
     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
 
     return preferences.getLong(context.getString(R.string.pref_reminder_start_key), 0);
   }
 
+  /**
+   * Sets the time for calculating the elapsed time
+   *
+   * @param context
+   * @param timerStart
+   */
   public static void setTimerStart(Context context, long timerStart) {
     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
 

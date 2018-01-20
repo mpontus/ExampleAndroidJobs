@@ -13,11 +13,19 @@ import app.example.schedulers.MainActivity;
 import app.example.schedulers.R;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Functions for displaying notification
+ */
 public class NotificationUtils {
   private static final int NOTIFICATION_ID = 0;
   private static final String CHANNEL_ID = "main";
   private static final int PENDING_INTENT_REQUEST_CODE = 0;
 
+  /**
+   * Show the sample notification with the elapsed time
+   *
+   * @param context
+   */
   public static void showNotification(Context context) {
     NotificationManager notificationManager =
         (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
@@ -53,6 +61,12 @@ public class NotificationUtils {
     PreferenceUtils.setTimerStart(context, System.currentTimeMillis());
   }
 
+  /**
+   * Format the string with the elapsed time
+   *
+   * @param context
+   * @return
+   */
   private static String getNotificationMessage(Context context) {
     long start = PreferenceUtils.getTimerStart(context);
     long now = System.currentTimeMillis();
@@ -66,6 +80,12 @@ public class NotificationUtils {
         secondsLeftover);
   }
 
+  /**
+   * Create pending intent that will open the application when user clicks on notification
+   *
+   * @param context
+   * @return
+   */
   private static PendingIntent getPendingIntent(Context context) {
     Intent launchMainActivity = new Intent(context, MainActivity.class);
 

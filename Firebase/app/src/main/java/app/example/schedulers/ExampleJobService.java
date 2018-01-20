@@ -6,6 +6,9 @@ import app.example.schedulers.utils.NotificationUtils;
 import com.firebase.jobdispatcher.JobParameters;
 import com.firebase.jobdispatcher.JobService;
 
+/**
+ * Background job which shows a notification
+ */
 public class ExampleJobService extends JobService {
   @Override
   public boolean onStartJob(JobParameters job) {

@@ -13,6 +13,9 @@ import app.example.schedulers.utils.NotificationUtils;
 import app.example.schedulers.utils.PreferenceUtils;
 import app.example.schedulers.utils.SchedulerUtils;
 
+/**
+ * Activity which displays a single button to toggle a scheduled job
+ */
 public class MainActivity extends AppCompatActivity implements OnSharedPreferenceChangeListener {
   private Button mButton;
   private Toast mToast;
@@ -57,6 +60,9 @@ public class MainActivity extends AppCompatActivity implements OnSharedPreferenc
     }
   }
 
+  /**
+   * Actualize the button label according to current state of the application
+   */
   private void updateButtonLabel() {
     boolean isReminderEnabled = PreferenceUtils.isReminderEnabled(this);
 
@@ -65,6 +71,11 @@ public class MainActivity extends AppCompatActivity implements OnSharedPreferenc
         : getString(R.string.button_title_reminder_disable));
   }
 
+  /**
+   * Show the message, replace any previous messages
+   *
+   * @param message
+   */
   private void showToast(String message) {
     if (mToast != null) {
       mToast.cancel();
