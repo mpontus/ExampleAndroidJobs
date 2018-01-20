@@ -29,4 +29,10 @@ public class SchedulerUtils {
 
     dispatcher.mustSchedule(job);
   }
+
+  public static void unscheduleJob(Context context) {
+    FirebaseJobDispatcher dispatcher = new FirebaseJobDispatcher(new GooglePlayDriver(context));
+
+    dispatcher.cancel(JOB_TAG);
+  }
 }

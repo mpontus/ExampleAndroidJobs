@@ -2,4 +2,9 @@
   <string name="app_name">Firebase JobDispatcher Example</string>
   <string name="toggle_job">Toggle Job</string>
   <string name="main_notification_channel_name">Job dispatcher example</string>
+  <string name="pref_reminder_enabled_key">reminder_enabled</string>
+  <string name="message_reminder_enabled">Job is now scheduled</string>
+  <string name="message_reminder_disabled">Job has been unscheduled</string>
+  <string name="button_title_reminder_enable">Schedule Job</string>
+  <string name="button_title_reminder_disable">Unschedule Job</string>
 </resources>
