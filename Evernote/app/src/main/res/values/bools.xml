@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <bool name="pref_reminder_enabled_default_value">false</bool>
+</resources>
