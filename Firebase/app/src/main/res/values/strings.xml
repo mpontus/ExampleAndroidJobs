@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">Firebase JobDispatcher Example</string>
+  <string name="toggle_job">Toggle Job</string>
 </resources>
