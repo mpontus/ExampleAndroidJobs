@@ -7,14 +7,15 @@ import com.firebase.jobdispatcher.GooglePlayDriver;
 import com.firebase.jobdispatcher.Job;
 import com.firebase.jobdispatcher.Lifetime;
 import com.firebase.jobdispatcher.Trigger;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Functions for scheduling the job
  */
 public class SchedulerUtils {
   private static final String JOB_TAG = "example-job";
-  private static final int REMINDER_INTERVAL_SECONDS = 60;
-  private static final int REMINDER_FLEXTIME_SECONDS = 60;
+  private static final int REMINDER_INTERVAL_SECONDS = (int) TimeUnit.MINUTES.toSeconds(15);
+  private static final int REMINDER_FLEXTIME_SECONDS = (int) TimeUnit.MINUTES.toSeconds(5);
 
   /**
    * Schedule a recurring job which shows a notification every couple of minutes

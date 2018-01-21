@@ -12,6 +12,8 @@ import com.firebase.jobdispatcher.JobService;
 public class ExampleJobService extends JobService {
   @Override
   public boolean onStartJob(JobParameters job) {
+    Log.v("ExampleJobService", "onStartJob");
+
     NotificationUtils.showNotification(this);
 
     return false; // Answers the question: "Is there still work going on?"
