@@ -8,4 +8,9 @@
     <item name="colorAccent">@color/colorAccent</item>
   </style>
 
+  <style name="PrimaryButton" parent="Widget.AppCompat.Button.Colored">
+    <item name="colorButtonNormal">@color/colorPrimary</item>
+    <item name="android:textColorPrimary">#fff</item>
+  </style>
+
 </resources>

@@ -1,3 +1,13 @@
 <resources>
-  <string name="app_name">Example Android Jobs</string>
+  <string name="app_name">Android JobScheduler Example</string>
+  <string name="toggle_job">Toggle Job</string>
+  <string name="main_notification_channel_name">Job dispatcher example</string>
+  <string name="pref_notifications_enabled_key">notifications_enabled</string>
+  <string name="message_notifications_enabled">Job is now scheduled</string>
+  <string name="message_notifications_disabled">Job has been unscheduled</string>
+  <string name="button_title_notifications_enable">Schedule Job</string>
+  <string name="button_title_notifications_disable">Unschedule Job</string>
+  <string name="notification_title">Periodic Notification</string>
+  <string name="pref_last_timestamp_key">last_timestamp</string>
+  <string name="message_time_elapsed">Elapsed time: %d minutes %d seconds</string>
 </resources>
