@@ -1,23 +1,20 @@
 package com.example.schedulers;
 
+import android.support.annotation.NonNull;
 import android.util.Log;
+import com.evernote.android.job.Job;
 import com.example.schedulers.utils.NotificationUtils;
-import com.firebase.jobdispatcher.JobParameters;
-import com.firebase.jobdispatcher.JobService;
 
-public class NotificationJobService extends JobService {
+public class NotificationJobService extends Job {
+  public static final String TAG = "NotificationJobService";
 
+  @NonNull
   @Override
-  public boolean onStartJob(JobParameters params) {
-    Log.v("NotificationJobService", "onStartJob");
+  protected Result onRunJob(@NonNull Params params) {
+    Log.v("NotificationJobService", "onRunJob");
 
-    NotificationUtils.showNotification(this);
+    NotificationUtils.showNotification(getContext());
 
-    return false;
-  }
-
-  @Override
-  public boolean onStopJob(JobParameters params) {
-    return false;
+    return Result.SUCCESS;
   }
 }
