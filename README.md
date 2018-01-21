@@ -2,26 +2,23 @@
 
 > Job scheduler examples for android
 
-There are several options for implementing job scheduling in android. Each branch corresponds to a different library:
+Branches show usage of following libraries:
 
 - [Android JobScheduler](https://github.com/mpontus/ExampleAndroidJobs/tree/AndroidJobScheduler) API >= 21 (Lollipop)
-- [Evernote Android-Job](https://github.com/mpontus/ExampleAndroidJobs/tree/EvernoteAndroidJob) API >= 14 (Ice Cream Sandwich)
 - [Firebase JobDispatcher](https://github.com/mpontus/ExampleAndroidJobs/tree/FirebaseJobDispatcher) API >= 9 (Gingerbread)
+- [Evernote Android-Job](https://github.com/mpontus/ExampleAndroidJobs/tree/EvernoteAndroidJob) API >= 14 (Ice Cream Sandwich)
 
-Use following table to navigate to a diff between every branch:
+Here are the differences between each implementation:
 
-|                     |Android JobScheduler|Evernote Android-Job|Firebase JobDispatcher|
-|---------------------|--------------------|--------------------|----------------------|
-|AndroidJobScheduler  |                    |                    |                      |
-|Evernote Android-Job |                    |                    |                      |
-|FirebaseJobDispatcher|                    |                    |                      |
+|                      |Firebase JobDispatcher|Evernote Android-Job|
+|----------------------|----------------------|--------------------|
+|Android JobScheduler  |[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/AndroidJobScheduler...FirebaseJobDispatcher)|[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/AndroidJobScheduler...EvernoteAndroidJob) |
+|Firebase JobDispatcher||[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/FirebaseJobDispatcher...EvernoteAndroidJob)|
 
 ## Table of Contents
 
 - [Install](#install)
 - [Usage](#usage)
-- [Maintainers](#maintainers)
-- [Contribute](#contribute)
 - [License](#license)
 
 ## Install
@@ -35,14 +32,6 @@ Use following table to navigate to a diff between every branch:
 Press **Schedule Job** to start the periodic which will display notifications about every 15 minutes.
 
 You might need to reschedule a job after installing different example.
-
-## Maintainers
-
-[@mpontus](https://github.com/mpontus)
-
-## Contribute
-
-PRs accepted.
 
 ## License
 
