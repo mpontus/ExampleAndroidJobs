@@ -1,5 +1,5 @@
 <resources>
-  <string name="app_name">Android JobScheduler Example</string>
+  <string name="app_name">Firebase JobDispatcher Example</string>
   <string name="toggle_job">Toggle Job</string>
   <string name="main_notification_channel_name">Job dispatcher example</string>
   <string name="pref_notifications_enabled_key">notifications_enabled</string>
