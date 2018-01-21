@@ -9,9 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
-import app.example.schedulers.utils.NotificationUtils;
 import app.example.schedulers.utils.PreferenceUtils;
-import app.example.schedulers.utils.SchedulerUtils;
 
 /**
  * Activity which displays a single button to toggle a scheduled job
@@ -36,9 +34,9 @@ public class MainActivity extends AppCompatActivity implements OnSharedPreferenc
 
         if (nowIsReminderEnabled) {
           PreferenceUtils.setTimerStart(MainActivity.this, System.currentTimeMillis());
-          SchedulerUtils.scheduleJob(MainActivity.this);
+          NotificationJob.schedulePeriodicJob();
         } else {
-          SchedulerUtils.unscheduleJob(MainActivity.this);
+          NotificationJob.cancelPeriodicJob();
         }
 
         showToast(nowIsReminderEnabled
