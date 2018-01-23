@@ -2,10 +2,13 @@ package com.example.schedulers.utils;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.SystemClock;
 import com.example.schedulers.AlarmReceiver;
+import com.example.schedulers.BootReceiver;
 import java.util.concurrent.TimeUnit;
 
 public class SchedulerUtils {
@@ -14,6 +17,16 @@ public class SchedulerUtils {
   private static final int PENDING_INTENT_REQUEST_CODE = 0;
 
   public static void scheduleJob(Context context) {
+    setAlarm(context);
+    setBootReceiver(context);
+  }
+
+  public static void unscheduleJob(Context context) {
+    unsetAlarm(context);
+    unsetBootReceiver(context);
+  }
+
+  public static void setAlarm(Context context) {
     AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 
     if (alarmManager == null) {
@@ -26,7 +39,7 @@ public class SchedulerUtils {
         getPendingIntent(context));
   }
 
-  public static void unscheduleJob(Context context) {
+  public static void unsetAlarm(Context context) {
     AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 
     if (alarmManager == null) {
@@ -34,6 +47,24 @@ public class SchedulerUtils {
     }
 
     alarmManager.cancel(getPendingIntent(context));
+  }
+
+  private static void setBootReceiver(Context context) {
+    ComponentName receiver = new ComponentName(context, BootReceiver.class);
+    PackageManager pm = context.getPackageManager();
+
+    pm.setComponentEnabledSetting(receiver,
+        PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+        PackageManager.DONT_KILL_APP);
+  }
+
+  private static void unsetBootReceiver(Context context) {
+    ComponentName receiver = new ComponentName(context, BootReceiver.class);
+    PackageManager pm = context.getPackageManager();
+
+    pm.setComponentEnabledSetting(receiver,
+        PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+        PackageManager.DONT_KILL_APP);
   }
 
   private static PendingIntent getPendingIntent(Context context) {
