@@ -2,18 +2,22 @@
 
 > Job scheduler examples for android
 
-Branches show usage of following libraries:
+This repository demonstrates several approaches for implementing peridic jobs in Android.
+
+Each example blongs to its own branch:
 
 - [Android JobScheduler](https://github.com/mpontus/ExampleAndroidJobs/tree/AndroidJobScheduler) API >= 21 (Lollipop)
 - [Firebase JobDispatcher](https://github.com/mpontus/ExampleAndroidJobs/tree/FirebaseJobDispatcher) API >= 9 (Gingerbread)
 - [Evernote Android-Job](https://github.com/mpontus/ExampleAndroidJobs/tree/EvernoteAndroidJob) API >= 14 (Ice Cream Sandwich)
+- [Android AlarmManager](https://github.com/mpontus/ExampleAndroidJobs/tree/AndroidAlarmManager) API >= 1
 
-Here are the differences between each implementation:
+Use the following table to review the diffs between branches:
 
-|                      |Firebase JobDispatcher|Evernote Android-Job|
-|----------------------|----------------------|--------------------|
-|Android JobScheduler  |[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/AndroidJobScheduler...FirebaseJobDispatcher)|[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/AndroidJobScheduler...EvernoteAndroidJob) |
-|Firebase JobDispatcher||[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/FirebaseJobDispatcher...EvernoteAndroidJob)|
+|                      |Android JobScheduler|Firebase JobDispatcher|Evernote Android-Job|
+|----------------------|--------------------|----------------------|--------------------|
+|Android AlarmManager  |[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/AndroidJobScheduler...AndroidAlarmManager)|[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/FirebaseJobDispatcher...AndroidAlarmManager)|[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/EvernoteAndroidJob...AndroidAlarmManager)|
+|Evernote Android-Job  |[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/AndroidJobScheduler...EvernoteAndroidJob)|[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/FirebaseJobDispatcher...EvernoteAndroidJob)||
+|Firebase JobDispatcher|[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/AndroidJobScheduler...FirebaseJobDispatcher)|||
 
 ## Table of Contents
 
