@@ -15,9 +15,9 @@ Review diffs between each branch:
 
 |                      |Android JobScheduler|Firebase JobDispatcher|Evernote Android-Job|
 |----------------------|--------------------|----------------------|--------------------|
-|Android AlarmManager  |[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/AndroidJobScheduler...AndroidAlarmManager)|[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/FirebaseJobDispatcher...AndroidAlarmManager)|[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/EvernoteAndroidJob...AndroidAlarmManager)|
-|Evernote Android-Job  |[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/AndroidJobScheduler...EvernoteAndroidJob)|[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/FirebaseJobDispatcher...EvernoteAndroidJob)||
 |Firebase JobDispatcher|[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/AndroidJobScheduler...FirebaseJobDispatcher)|||
+|Evernote Android-Job  |[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/AndroidJobScheduler...EvernoteAndroidJob)|[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/FirebaseJobDispatcher...EvernoteAndroidJob)||
+|Android AlarmManager  |[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/AndroidJobScheduler...AndroidAlarmManager)|[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/FirebaseJobDispatcher...AndroidAlarmManager)|[diff](https://github.com/mpontus/ExampleAndroidJobs/compare/EvernoteAndroidJob...AndroidAlarmManager)|
 
 ## Table of Contents
 
